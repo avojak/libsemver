@@ -35,24 +35,24 @@ Retrieve individual parts of the version:
 ```vala
 var version = new SemVer.Version.from_string ("1.2.3-alpha+build.3");
 print (version.major);
-// Prints "1"
+// Output: "1"
 print (version.minor);
-// Prints "2"
+// Output: "2"
 print (version.patch);
-// Prints "3"
+// Output: "3"
 print (version.prerelease);
-// Prints "alpha"
+// Output: "alpha"
 print (version.build_metadata);
-// Prints "build.3"
+// Output: "build.3"
 ```
 
 Converting a `Version` object to a `string`:
 
 ```vala
 print (new SemVer.Version.from_parts ("0", "4", "2", "beta").to_string ());
-// Prints "0.4.2-beta"
+// Output: "0.4.2-beta"
 print (new SemVer.Version.from_parts ("5", "4", "0", null, "20220608").to_string ());
-// Prints "5.4.0+20220608"
+// Output: "5.4.0+20220608"
 ```
 
 Incrementing core parts of the `Version` object:
@@ -61,7 +61,7 @@ Incrementing core parts of the `Version` object:
 var version = new SemVer.Version.from_string ("1.2.3");
 version.increment_patch_version ();
 print (version.to_string ());
-// Prints "1.2.4"
+// Output: "1.2.4"
 ```
 
 Comparing precedence:
@@ -70,11 +70,11 @@ Comparing precedence:
 var a = new SemVer.Version.from_string ("1.0.0");
 var b = new SemVer.Version.from_string ("2.0.0");
 print ("%d", a.compare_to (b));
-// Prints "-1"
+// Output: "-1"
 print ("%d", b.compare_to (a));
-// Prints "1"
+// Output: "1"
 print ("%d", a.compare_to (a));
-// Prints "0"
+// Output: "0"
 ```
 
 ## Building, Testing, and Installation
