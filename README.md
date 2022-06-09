@@ -30,6 +30,22 @@ Creating a new `Version` object from parts:
 new SemVer.Version.from_parts ("1", "2", "3", "alpha", "build.3");
 ```
 
+Retrieve individual parts of the version:
+
+```vala
+var version = new SemVer.Version.from_string ("1.2.3-alpha+build.3");
+print (version.major);
+// Prints "1"
+print (version.minor);
+// Prints "2"
+print (version.patch);
+// Prints "3"
+print (version.prerelease);
+// Prints "alpha"
+print (version.build_metadata);
+// Prints "build.3"
+```
+
 Converting a `Version` object to a `string`:
 
 ```vala
