@@ -149,6 +149,17 @@ namespace SemVer {
             assert_true (create_version (a).compare_to (create_version (b)) == res);
         }
 
+        private static void test_sorting () {
+            var versions = new GLib.List<Version> ();
+            versions.append (create_version ("2.0.0"));
+            versions.append (create_version ("3.0.0"));
+            versions.append (create_version ("1.0.0"));
+            versions.sort ((a, b) => { return a.compare_to (b); });
+            assert_true (versions.nth_data (0).to_string () == "1.0.0");
+            assert_true (versions.nth_data (1).to_string () == "2.0.0");
+            assert_true (versions.nth_data (2).to_string () == "3.0.0");
+        }
+
         private static void test_increment () {
             verify_increment_major ("0.0.0", "1.0.0");
             verify_increment_major ("1.0.0", "2.0.0");
@@ -253,6 +264,7 @@ namespace SemVer {
             GLib.Test.add_func ("/create/invalid", test_create_invalid);
             GLib.Test.add_func ("/create/identifiers", test_identifiers);
             GLib.Test.add_func ("/precedence", test_precedence);
+            GLib.Test.add_func ("/sorting", test_sorting);
             GLib.Test.add_func ("/update/increment", test_increment);
             GLib.Test.add_func ("/update/decrement", test_decrement);
             GLib.Test.add_func ("/update/decrement/invalid", test_decrement_unchanged);

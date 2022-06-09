@@ -64,6 +64,18 @@ print (version.to_string ());
 // Prints "1.2.4"
 ```
 
+Comparing precedence:
+
+```vala
+var a = new SemVer.Version.from_string ("1.0.0");
+var b = new SemVer.Version.from_string ("2.0.0");
+print ("%d", a.compare_to (b));
+// Prints "-1"
+print ("%d", b.compare_to (a));
+// Prints "1"
+print ("%d", a.compare_to (a));
+// Prints "0"
+```
 
 ## Building, Testing, and Installation
 
