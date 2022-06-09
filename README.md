@@ -34,9 +34,9 @@ Converting a `Version` object to a `string`:
 
 ```vala
 print (new SemVer.Version.from_parts ("0", "4", "2", "beta").to_string ());
-# Prints "0.4.2-beta"
+// Prints "0.4.2-beta"
 print (new SemVer.Version.from_parts ("5", "4", "0", null, "20220608").to_string ());
-# Prints "5.4.0+20220608"
+// Prints "5.4.0+20220608"
 ```
 
 Incrementing core parts of the `Version` object:
@@ -45,7 +45,7 @@ Incrementing core parts of the `Version` object:
 var version = new SemVer.Version.from_string ("1.2.3");
 version.increment_patch_version ();
 print (version.to_string ());
-# Prints "1.2.4"
+// Prints "1.2.4"
 ```
 
 
