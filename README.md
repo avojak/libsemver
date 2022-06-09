@@ -1,3 +1,8 @@
+![Build](https://github.com/avojak/libsemver/actions/workflows/build.yml/badge.svg)
+![Lint](https://github.com/avojak/libsemver/actions/workflows/lint.yml/badge.svg)
+![GitHub](https://img.shields.io/github/license/avojak/libsemver.svg?color=blue)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/avojak/libsemver?sort=semver)
+
 # SemVer
 
 SemVer is a GObject-based library for creating and handling Semantic Versions (https://semver.org).
