@@ -87,6 +87,11 @@ namespace SemVer {
         }
 
         /**
+         * Construction with providing initial parts is disallowed.
+         */
+        private Version () { }
+
+        /**
          * Creates a new {@link Version} from a string.
          *
          * @param str The string to parse into a {@link Version}.
