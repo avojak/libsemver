@@ -1,6 +1,6 @@
 valadoc = find_program('valadoc')
 
-valadoc_vala_dir = 'semver-0-vala'
+valadoc_vala_dir = 'semver-1-vala'
 valadoc_target = custom_target(
     'valadoc',
     command: [
@@ -21,7 +21,7 @@ valadoc_target = custom_target(
     depends: libsemver
 )
 
-valadoc_c_dir = 'semver-0'
+valadoc_c_dir = 'semver-1'
 cdoc_target = custom_target(
     'cdocs',
     command: [
@@ -36,7 +36,7 @@ cdoc_target = custom_target(
         '--verbose',
         '--force',
         '-o', join_paths(meson.current_build_dir(), valadoc_c_dir),
-        '--doclet-arg=' + 'lib/semver-0.h'
+        '--doclet-arg=' + 'lib/semver-1.h'
     ],
     build_by_default: true,
     output: valadoc_c_dir,
