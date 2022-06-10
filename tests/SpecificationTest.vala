@@ -11,9 +11,9 @@ namespace SemVer {
          * Tests that the SemVer spec version constants are correctly set.
          */
         private static void test_spec_version () {
-            assert_true (SemVer.get_spec_major_version () == 2);
-            assert_true (SemVer.get_spec_minor_version () == 0);
-            assert_true (SemVer.get_spec_patch_version () == 0);
+            assert_true (SemVer.SPEC_MAJOR_VERSION == 2);
+            assert_true (SemVer.SPEC_MINOR_VERSION == 0);
+            assert_true (SemVer.SPEC_PATCH_VERSION == 0);
         }
 
         public static void main (string[] args) {

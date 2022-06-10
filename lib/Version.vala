@@ -98,7 +98,7 @@ namespace SemVer {
          *
          * @return The newly created {@link Version}.
          *
-         * @throws VersionParseError if the supplied version string is invalid.
+         * @throws VersionParseError If the supplied version string is invalid.
          */
         public Version.from_string (string str) throws VersionParseError {
             // First verify that the provided string matches the SemVer regex
@@ -131,7 +131,7 @@ namespace SemVer {
          *
          * @return The newly created {@link Version}.
          *
-         * @throws VersionParseError if any of the supplied parts are invalid.
+         * @throws VersionParseError If any of the supplied parts are invalid.
          */
         public Version.from_parts (string major, string minor, string patch, string? prerelease = null,
                 string? build_metadata = null) throws VersionParseError {
@@ -261,7 +261,7 @@ namespace SemVer {
          *
          * @param major The major version part.
          *
-         * @throws VersionParseError if the supplied major version is invalid.
+         * @throws VersionParseError If the supplied major version is invalid.
          */
         public void set_major_version (string major) throws VersionParseError {
             if (!major_version_regex.match (major, GLib.RegexMatchFlags.ANCHORED)) {
@@ -275,7 +275,7 @@ namespace SemVer {
          *
          * @param minor The minor version part.
          *
-         * @throws VersionParseError if the supplied minor version is invalid.
+         * @throws VersionParseError If the supplied minor version is invalid.
          */
         public void set_minor_version (string minor) throws VersionParseError {
             if (!minor_version_regex.match (minor, GLib.RegexMatchFlags.ANCHORED)) {
@@ -289,7 +289,7 @@ namespace SemVer {
          *
          * @param patch The patch version part.
          *
-         * @throws VersionParseError if the supplied patch version is invalid.
+         * @throws VersionParseError If the supplied patch version is invalid.
          */
         public void set_patch_version (string patch) throws VersionParseError {
             if (!patch_version_regex.match (patch, GLib.RegexMatchFlags.ANCHORED)) {
@@ -303,7 +303,7 @@ namespace SemVer {
          *
          * @param prerelease The prerelease identifier.
          *
-         * @throws VersionParseError if the supplied prerelease identifier is invalid.
+         * @throws VersionParseError If the supplied prerelease identifier is invalid.
          */
         public void set_prerelease_identifier (string? prerelease) throws VersionParseError {
             if (prerelease == null) {
@@ -322,7 +322,7 @@ namespace SemVer {
          *
          * @param build_metadata The build metadata identifier.
          *
-         * @throws VersionParseError if the supplied build metadata identifier is invalid.
+         * @throws VersionParseError If the supplied build metadata identifier is invalid.
          */
         public void set_build_metadata_identifier (string? build_metadata) throws VersionParseError {
             if (build_metadata == null) {
@@ -346,7 +346,7 @@ namespace SemVer {
         /**
          * Decrements the major version part. If the version part is already 0, it will be unchanged.
          *
-         * @return the updated value of the version part.
+         * @return The updated value of the version part.
          */
         public string decrement_major_version () {
             if (can_decrement (this.major)) {
@@ -365,7 +365,7 @@ namespace SemVer {
         /**
          * Decrements the minor version part. If the version part is already 0, it will be unchanged.
          *
-         * @return the updated value of the version part.
+         * @return The updated value of the version part.
          */
         public string decrement_minor_version () {
             if (can_decrement (this.minor)) {
@@ -384,7 +384,7 @@ namespace SemVer {
         /**
          * Decrements the patch version part. If the version part is already 0, it will be unchanged.
          *
-         * @return the updated value of the version part.
+         * @return The updated value of the version part.
          */
         public string decrement_patch_version () {
             if (can_decrement (this.patch)) {

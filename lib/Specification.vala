@@ -5,29 +5,19 @@
 
 namespace SemVer {
 
-    private const uint SPEC_MAJOR_VERSION = 2;
-    private const uint SPEC_MINOR_VERSION = 0;
-    private const uint SPEC_PATCH_VERSION = 0;
+    /**
+     * The major version of the SemVer specification.
+     */
+    public const uint SPEC_MAJOR_VERSION = 2;
 
     /**
-     * Returns the major version of the SemVer specification.
+     * The minor version of the SemVer specification.
      */
-    public uint get_spec_major_version () {
-        return SPEC_MAJOR_VERSION;
-    }
+    public const uint SPEC_MINOR_VERSION = 0;
 
     /**
-     * Returns the minor version of the SemVer specification.
+     * The patch version of the SemVer specification.
      */
-    public uint get_spec_minor_version () {
-        return SPEC_MINOR_VERSION;
-    }
-
-    /**
-     * Returns the patch version of the SemVer specification.
-     */
-    public uint get_spec_patch_version () {
-        return SPEC_PATCH_VERSION;
-    }
+    public const uint SPEC_PATCH_VERSION = 0;
 
 }
