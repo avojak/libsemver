@@ -14,6 +14,12 @@ SemVer is a GObject-based library for creating and handling Semantic Versions (h
 
 ## Example Usage
 
+If using Meson, simply add the dependency:
+
+```meson
+dependency('semver-1', version: '>= 1.0.0')
+```
+
 Creating a new `Version` object:
 
 ```vala

@@ -33,6 +33,6 @@ jobs:
           name: libsemver
           path: ./
       - name: Set Permissions
-        run: chmod +x ./build/lib/libsemver.so*
+        run: chmod +x ./build/lib/libsemver-1.so*
       - name: Test
         run: ninja -C build test
