@@ -41,6 +41,24 @@ install_data(
     install_dir: join_paths(get_option('datadir'), 'vala', 'vapi')
 )
 
+g_ir_compiler = find_program('g-ir-compiler')
+custom_target(
+    semver_typelib,
+    command: [
+        g_ir_compiler,
+        '--shared-library',
+        '@PLAINNAME@',
+        '--output',
+        '@OUTPUT@',
+        join_paths(meson.current_build_dir(), semver_gir),
+    ],
+    input: libsemver,
+    output: semver_typelib,
+    depends: libsemver,
+    install: true,
+    install_dir: join_paths(get_option('libdir'), 'girepository-1.0'),
+)
+
 libsemver_dep = declare_dependency(
     link_with: libsemver,
     dependencies: libsemver_deps,
