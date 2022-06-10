@@ -1,4 +1,4 @@
-project('semver', 'vala', 'c', version: '1.0.0')
+project('semver-1', 'vala', 'c', version: '1.0.0')
 
 if build_machine.system() == 'linux'
     vala_os_arg = ['--define=LINUX']
